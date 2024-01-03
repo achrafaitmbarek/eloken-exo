@@ -56,4 +56,5 @@ const products = [
       isPacSystemModule: true,
     }
 
-  ]
+  ] 
+export default products
