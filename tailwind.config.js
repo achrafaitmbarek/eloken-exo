@@ -6,7 +6,11 @@ module.exports = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+         'costum-button-color':'#0F172A',
+      }
+    },
   },
   plugins: [],
 }

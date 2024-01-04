@@ -3,39 +3,19 @@ import Image from "next/image";
 import products from "./data/data";
 import React, { useEffect } from "react";
 import Link from "next/link";
+import CustomButton from "./components/customButton";
 
 export default function Home() {
-  useEffect(() => {
-    localStorage.setItem("products", JSON.stringify(products));
-    console.log(storedProducts);
-  }, []);
-  const storedProducts = JSON.parse(localStorage.getItem("products"));
   return (
-    <div className="container mx-auto">
-      <h1 className="text-3xl font bold ">
-        Composez votre kit pompe a chaleur
+    <div className="flex flex-col gap-8 items-center text-center p-64">
+      <h1 className="text-5xl font-extrabold leading-10">
+        Composez votre Kit pompe à chaleur
       </h1>
-      <div className="grid gap-3 grid-cols-2">
-        {storedProducts.map((product, index) => (
-          <div>
-            <h2 key={index} className="text-2xl font-bold py-5">
-              {product.title}
-            </h2>
-            <p className="font-bold py-5">
-              {product.powerRange.max} / {product.powerRange.min}
-            </p>
-          </div>
-        ))}
-        <button
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md"
-          onClick={() => {
-            localStorage.removeItem("products");
-            console.log("storage cleared");
-          }}
-        >
-          clear local Storage
-        </button>
-      </div>
+      <p className="text-base font-normal leading-7">
+        Vous souhaitez installer une PAC chez vous ? Composez le Kit PAC idéal
+        pour votre maison grâce à notre configurateur en ligne et gratuit.
+      </p>
+      <CustomButton text={"Commencer"} />
     </div>
   );
 }
