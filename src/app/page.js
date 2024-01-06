@@ -1,9 +1,9 @@
 "use client";
 import Image from "next/image";
 import products from "./data/data";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import CustomButton from "./components/customButton";
+import CtaButton from "./components/ctaButton";
 
 export default function Home() {
   return (
@@ -15,7 +15,9 @@ export default function Home() {
         Vous souhaitez installer une PAC chez vous ? Composez le Kit PAC idéal
         pour votre maison grâce à notre configurateur en ligne et gratuit.
       </p>
-      <CustomButton text={"Commencer"} />
+      <Link href="/wizardForm">
+        <CtaButton text={"Commencer"} type={'submit'} />
+      </Link>
     </div>
   );
 }

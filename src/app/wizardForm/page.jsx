@@ -1,25 +1,23 @@
 'use client';
 import React, { useState } from 'react'
-import CustomButton from '../components/customButton';
-
-
-
+import CtaButton from '../components/ctaButton';
+import { IoArrowBackCircleOutline } from "react-icons/io5"
 
 
 const WizardForm = () => {
   
-  const [isButtonClicked, setIsButtonClicked] = useState(false);
+  const [currentStep, setCurrentStep] = useState(0);
 
   const handleClick=() => {
-    setIsButtonClicked(!isButtonClicked);
+    setCurrentStep(prevState => prevState+1);
+    console.log(currentStep);
   }
 
   return (
-  <div>
-    <CustomButton text='Quitter' onClick={handleClick}/>
+  <div className='flex flex-row items-center space-x-3'>
+    <CtaButton text='Quitter' onClick={handleClick} icon={<IoArrowBackCircleOutline />}/>
     <p>Kit Pompe a chaleur</p>
-    {isButtonClicked && <p>Vous avez cliqué sur le bouton</p>}
-    </div>
+  </div>
   )
 }
 
