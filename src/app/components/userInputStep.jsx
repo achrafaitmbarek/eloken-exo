@@ -1,9 +1,9 @@
 import React from 'react'
 
-const userInputStep = () => {
+const UserInputStep = () => {
   return (
-    <div>userInputStep</div>
+    <div>UserInputStep</div>
   )
 }
 
-export default userInputStep
+export default UserInputStep

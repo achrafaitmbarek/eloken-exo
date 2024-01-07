@@ -9,6 +9,7 @@ module.exports = {
     extend: {
       colors: {
          'costum-button-color':'#0F172A',
+         'progress-bar-color':'#0F172A',
       }
     },
   },

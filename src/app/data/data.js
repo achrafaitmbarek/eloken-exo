@@ -1,4 +1,11 @@
-const products = [
+import img1 from '../../assets/house.jpg';
+import img2 from '../../assets/immeuble.jpg';
+import img3 from '../../assets/office.jpg';
+import img4 from '../../assets/electricity.jpg';
+import img5 from '../../assets/gaz.jpg';
+import img6 from '../../assets/wood.jpg';
+
+const productsSuggestions = [
     {
       title: "Pompe à chaleur 1",
       powerRange:
@@ -57,4 +64,50 @@ const products = [
     }
 
   ] 
-export default products
+
+  const buildingSelection = [
+    {
+      question: "Quel Type De Batiment Souhaitez Vous Chauffer?",
+      options: [
+        {
+          id: 1,
+          title: "Maison individuelle",
+          imgPath: img1,
+        },
+        { 
+          id: 2, 
+          title: "Immeuble", 
+          imgPath: img2,
+      },
+        { 
+          id: 3, 
+          title: "Bureaux", 
+          imgPath: img3, 
+      },
+      ],
+    },
+  ];
+
+  const HeatingTypeStep = [
+    {
+      question: "Quel le Type De Chauffage Pricipame ?",
+      options: [
+        {
+          id: 1,
+          title: "electricité ",
+          imgPath: img4,
+        },
+        { 
+          id: 2, 
+          title: "gaz", 
+          imgPath: img5,
+      },
+        { 
+          id: 3, 
+          title: "Bois", 
+          imgPath: img6, 
+      },
+      ],
+    },
+  ];
+export default {buildingSelection,productsSuggestions}

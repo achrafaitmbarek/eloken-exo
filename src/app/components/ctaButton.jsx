@@ -4,7 +4,7 @@ import React from "react";
 
 const CustomButton = ({ text, type ,onClick ,icon }) => {
 
-  const buttonStyle = text === 'previous'? 'border-2 border-black bg-white-button-color text-black rounded-lg px-4 py-2 flex flex-row items-center justify-center'
+  const buttonStyle = text === 'Previous'? 'border border-black bg-white-button-color text-black rounded-lg px-4 py-2 flex flex-row items-center justify-center'
   :'border-2 border-black bg-costum-button-color text-white rounded-lg px-4 py-2 flex flex-row items-center';
  
   return (

@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const selectionStep = () => {
-  return (
-    <div>selectionStep</div>
-  )
-}
+  return <div>selectionStep</div>;
+};
 
-export default selectionStep
+export default selectionStep;
