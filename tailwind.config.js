@@ -8,8 +8,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-         'costum-button-color':'#0F172A',
-         'progress-bar-color':'#0F172A',
+         'costum-bleu-color':'#0F172A',
+         'progress-bleu-color':'#0F172A',
       }
     },
   },

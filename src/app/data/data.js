@@ -3,7 +3,7 @@ import img2 from '../../assets/immeuble.jpg';
 import img3 from '../../assets/office.jpg';
 import img4 from '../../assets/electricity.jpg';
 import img5 from '../../assets/gaz.jpg';
-import img6 from '../../assets/wood.jpg';
+import img6 from '../../assets/wood.jpg'
 
 const productsSuggestions = [
     {
@@ -110,4 +110,4 @@ const productsSuggestions = [
       ],
     },
   ];
-export default {buildingSelection,productsSuggestions}
+export default {buildingSelection,HeatingTypeStep,productsSuggestions}
