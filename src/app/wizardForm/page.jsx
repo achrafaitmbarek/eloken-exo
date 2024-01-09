@@ -30,6 +30,9 @@ const WizardForm = () => {
     // console.log(currentStep);
   };
 
+
+  
+
   const formSTeps = [
     <SelectionStep selection={buildingSelection} storageKey={'buildingType'} />,
     <UserInputStep

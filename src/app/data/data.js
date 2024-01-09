@@ -4,6 +4,8 @@ import img3 from '../../assets/office.jpg';
 import img4 from '../../assets/electricity.jpg';
 import img5 from '../../assets/gaz.jpg';
 import img6 from '../../assets/wood.jpg'
+import img7 from '../../assets/airEau1.jpg';
+import img8 from '../../assets/airEau2.jpg';
 
 const productsSuggestions = [
     {
@@ -14,7 +16,7 @@ const productsSuggestions = [
           max: 4999
         },
       price: 3456,
-      image: "",
+      image: img7,
       pacType: 'Air/Eau',
       gasType: "R330",
       warranty: 2,
@@ -28,7 +30,7 @@ const productsSuggestions = [
           max: 10000
         },
       price: 5678,
-      image: "",
+      image: img8,
       pacType: 'Air/Air',
       gasType: "R430",
       warranty: 3,
@@ -42,7 +44,7 @@ const productsSuggestions = [
           max: 15000
         },
       price: 7890,
-      image: "",
+      image: img7,
       pacType: 'Air/Eau',
       gasType: "R380",
       warranty: 4,
@@ -56,7 +58,7 @@ const productsSuggestions = [
           max: 30000
         },
       price: 1234,
-      image: "",
+      image: img8,
       pacType: 'Air/Air',
       gasType: "R380",
       warranty: 5,

@@ -1,4 +1,5 @@
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
+
 
 const UserInputStep = ({
   unit,
@@ -22,9 +23,7 @@ const UserInputStep = ({
   return (
     <div className="flex flex-col items-center justify-center">
       <div className="flex flex-col mt-24 gap-10 max-w-4xl">
-        <div className="text-3xl font-semibold max-w-md">
-          {question}
-        </div>
+        <div className="text-3xl font-semibold max-w-md">{question}</div>
         <div>
           <div className='text-xl font-semibold max-w-sm"'>{`${value.toLocaleString(
             "fr-FR"
@@ -37,6 +36,7 @@ const UserInputStep = ({
             onChange={handleChange}
             className="w-full h-2 bg-gray-400 rounded-full outline-none cursor-pointer disabled:opacity-50 disabled:pointer-events-none focus:outline-none"
           />
+      
         </div>
       </div>
     </div>
