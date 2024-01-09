@@ -33,7 +33,7 @@ function Result() {
     }
 
     return (
-        <div className="flex flex-row gap-24 justify-center items-center">
+        <div className="flex flex-row gap-24 justify-center items-center" style={{marginTop:'6rem'}}>
             <div className="flex flex-col gap-8 basis-2/4">
                 <div className="text-3xl font-semibold max-w-md">
                     <span className="text-gray-500">Merci pour ces informations !</span>{" "}
