@@ -1,17 +1,21 @@
 import React, { useEffect, useState } from "react";
 import Card from "./card";
 
-const selectionStep = ({ selection }) => {
-  const [selecetedChoice, setSelecetedChoice] = useState(null);
+const selectionStep = ({ selection,storageKey }) => {
+  const [selecetedChoice, setSelecetedChoice] = useState(1);
+  
   useEffect(() => {
+    localStorage.setItem(storageKey, selecetedChoice);
     console.log(selecetedChoice);
   }, [selecetedChoice]);
-  const handleChoice = (id) => {
+
+
+  const handleCardChoice = (id) => {
     setSelecetedChoice(id);
   };
   return (
-    <div className="flex flex-col items-center h-3/5 justify-center">
-      <div className="flex flex-col gap-4 max-w-3xl">
+    <div className="flex flex-col items-center justify-center">
+      <div className="flex flex-col mt-24 gap-10 max-w-4xl">
         <div className="text-3xl font-semibold max-w-sm">
           {selection[0].question}
         </div>
@@ -23,7 +27,7 @@ const selectionStep = ({ selection }) => {
               title={option.title}
               imgPath={option.imgPath}
               selecedId={selecetedChoice}
-              onCardClicked={handleChoice}
+              onCardClicked={handleCardChoice}
             />
           ))}
         </div>
