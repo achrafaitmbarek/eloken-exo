@@ -2,16 +2,16 @@ import React, { useEffect, useState } from "react";
 import Card from "./card";
 
 const selectionStep = ({ selection,storageKey }) => {
-  const [selecetedChoice, setSelecetedChoice] = useState(1);
+  const [selectedChoice, setSelectedChoice] = useState(1);
   
   useEffect(() => {
-    localStorage.setItem(storageKey, selecetedChoice);
-    console.log(selecetedChoice);
-  }, [selecetedChoice]);
+    localStorage.setItem(storageKey, selectedChoice);
+    console.log(selectedChoice);
+  }, [selectedChoice]);
 
 
   const handleCardChoice = (id) => {
-    setSelecetedChoice(id);
+    setSelectedChoice(id);
   };
   return (
     <div className="flex flex-col items-center justify-center">
@@ -26,7 +26,7 @@ const selectionStep = ({ selection,storageKey }) => {
               id={option.id}
               title={option.title}
               imgPath={option.imgPath}
-              selecedId={selecetedChoice}
+              selecedId={selectedChoice}
               onCardClicked={handleCardChoice}
             />
           ))}

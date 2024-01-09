@@ -27,13 +27,12 @@ function Result() {
         //just me suggesting a bad basic logic alogrithm to suggest a pump based on the user data hhhh  
         return pumps.find(pump => pump.powerRange.min <= userData.consumption && pump.powerRange.max >= userData.consumption);
     };
-
     if (!suggestedPump) {
         return <div>Loading...</div>; // in case the suggested pump is not yet set hh 
     }
 
     return (
-        <div className="flex flex-row gap-24 justify-center items-center" style={{marginTop:'6rem'}}>
+        <div className="flex flex-row gap-24 justify-center items-center" style={{marginTop:'3rem'}}>
             <div className="flex flex-col gap-8 basis-2/4">
                 <div className="text-3xl font-semibold max-w-md">
                     <span className="text-gray-500">Merci pour ces informations !</span>{" "}

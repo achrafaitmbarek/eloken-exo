@@ -8,10 +8,27 @@ import SelectionStep from "../components/selectionStep";
 import UserInputStep from "../components/userInputStep";
 import Result from "../components/result";
 import data from "../data/data";
+import Modal from "../components/modal";
+
 
 const WizardForm = () => {
   const [currentStep, setCurrentStep] = useState(1);
   const NBR_OF_STEPS = 5;
+
+  const [showModal, setShowModal] = useState(false);
+
+  const handleQuit = () => {
+    setShowModal(true);
+  };
+
+  const handleCancel = () => {
+    setShowModal(false);
+  };
+
+  const handleConfirm = () => {
+    window.location.href = "/";
+    setShowModal(false);
+  };
 
   const [progress, setProgress] = useState(0);
 
@@ -30,11 +47,8 @@ const WizardForm = () => {
     // console.log(currentStep);
   };
 
-
-  
-
   const formSTeps = [
-    <SelectionStep selection={buildingSelection} storageKey={'buildingType'} />,
+    <SelectionStep selection={buildingSelection} storageKey={"buildingType"} />,
     <UserInputStep
       unit={"°C"}
       minValue={0}
@@ -43,7 +57,7 @@ const WizardForm = () => {
       question={"A quelle température chauffez vous en moyenne cette surface ?"}
       storageKey={"temperature"}
     />,
-    <SelectionStep selection={HeatingTypeStep} storageKey={'heatingType'} />,
+    <SelectionStep selection={HeatingTypeStep} storageKey={"heatingType"} />,
     <UserInputStep
       unit={"Kwh/an"}
       minValue={1000}
@@ -57,7 +71,16 @@ const WizardForm = () => {
   return (
     <div className="m-8 space-y-6">
       <div className="flex flex-row items-center space-x-3">
-        <CtaButton text="Quitter" icon={<IoArrowBackCircleOutline />} />
+        <CtaButton
+          text="Quitter"
+          icon={<IoArrowBackCircleOutline />}
+          onClick={handleQuit}
+        />
+        <Modal
+          show={showModal}
+          onCancel={handleCancel}
+          onConfirm={handleConfirm}
+        />
         <p>Kit Pompe a chaleur</p>
       </div>
       <ProgressBar progress={progress} />

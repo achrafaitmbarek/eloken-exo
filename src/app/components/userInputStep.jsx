@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 
-
 const UserInputStep = ({
   unit,
   minValue,
@@ -34,9 +33,8 @@ const UserInputStep = ({
             max={maxValue}
             value={value}
             onChange={handleChange}
-            className="w-full h-2 bg-gray-400 rounded-full outline-none cursor-pointer disabled:opacity-50 disabled:pointer-events-none focus:outline-none"
+            className="w-full h-2 rounded-full appearance-none bg-costum-bleu-color outline-none cursor-pointer disabled:opacity-50 disabled:pointer-events-none focus:outline-none"
           />
-      
         </div>
       </div>
     </div>
