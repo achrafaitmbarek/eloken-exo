@@ -33,14 +33,14 @@ function Result() {
 
     return (
         <div className="flex flex-row gap-24 justify-center items-center" style={{marginTop:'3rem'}}>
-            <div className="flex flex-col gap-8 basis-2/4">
-                <div className="text-3xl font-semibold max-w-md">
+            <div className="flex flex-col gap-8 basis-2/4 ">
+                <div className="text-3xl font-semibold max-w-md animate-fade-in-scale-2 ">
                     <span className="text-gray-500">Merci pour ces informations !</span>{" "}
                     Nous avons choisi la {suggestedPump.title} pour vous
                 </div>
-                <div>
+                <div className='animate-fade-in-scale-2'>
                     <Link href="/resultsPage">
-                        <CtaButton text={"Terminer"} />
+                        <CtaButton text={"Terminer"}/>
                     </Link>
                 </div>
             </div>

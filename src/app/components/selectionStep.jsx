@@ -14,13 +14,13 @@ const selectionStep = ({ selection,storageKey }) => {
     setSelectedChoice(id);
   };
   return (
-    <div className="flex flex-col items-center justify-center">
-      <div className="flex flex-col mt-24 gap-10 max-w-4xl">
+    <div className="flex flex-col items-center justify-center  ">
+      <div className="flex flex-col mt-24 gap-10 max-w-4xl animate-fade-in-scale">
         <div className="text-3xl font-semibold max-w-sm">
           {selection[0].question}
         </div>
         <div className="flex flex-row gap-8">
-          {selection[0].options.map((option) => (
+          {selection[0].options.map((option,index) => (
             <Card
               key={option.id}
               id={option.id}

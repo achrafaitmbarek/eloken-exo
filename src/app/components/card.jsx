@@ -1,8 +1,12 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Image from 'next/image'
 
-const card = ({id ,title,imgPath,selecedId,onCardClicked}) => {
+const card = ({id ,title,imgPath,selecedId,onCardClicked,index}) => {
     const isSelected = id === selecedId;
+
+    useEffect(() => {
+      console.log('index:',index)
+    }, [isSelected])
   return (
     <div className={`flex-1 max-w-sm rounded overflow-hidden w-60 shadow-lg cursor-pointer ${isSelected ?'border-2 border-costum-bleu-color' : ''}`} onClick={()=>onCardClicked(id)}>
        <React.Suspense fallback={

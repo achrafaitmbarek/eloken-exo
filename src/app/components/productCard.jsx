@@ -11,7 +11,7 @@ const ProductCard = ({
   imgUrl,
 }) => {
   return (
-    <div className="relative flex flex-col text-gray-700 bg-white shadow-md bg-clip-border rounded-xl w-96">
+    <div className="relative flex flex-col text-gray-700 bg-white shadow-md animate-slide-from-bottom bg-clip-border rounded-xl w-96">
       <div className="relative h-56 mx-4 mt-6 overflow-hidden text-white shadow-lg bg-clip-border rounded-xl bg-blue-gray-500 shadow-blue-gray-500/40">
         <Image src={imgUrl}  className='w-full' alt="card-image" />
       </div>
