@@ -18,7 +18,7 @@ module.exports = {
         'fade-in-scale-1': 'fade-in-scale 0.8s ease-in-out',
         'fade-in-scale-2': 'fade-in-scale 1s ease-in-out',
         'fade-in-scale-3': 'fade-in-scale 1.2s ease-in-out',
-        'slide-from-bottom': 'slideFromBottom 1s ease-out',
+        'slide-from-bottom': 'slideFromBottom 1.2s ease-out',
       },
       keyframes: {
         'fade-in-scale': {
