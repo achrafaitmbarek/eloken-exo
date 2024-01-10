@@ -11,6 +11,7 @@ module.exports = {
       colors: {
          'costum-bleu-color':'#0F172A',
          'progress-bleu-color':'#0F172A',
+         'hover-bleu-color':'#1D2B53',
       }
     },
   },

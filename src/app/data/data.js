@@ -67,7 +67,7 @@ const productsSuggestions = [
 
   ] 
 
-  const buildingSelection = [
+  const buildingType = [
     {
       question: "Quel Type De Batiment Souhaitez Vous Chauffer?",
       options: [
@@ -90,7 +90,7 @@ const productsSuggestions = [
     },
   ];
 
-  const HeatingTypeStep = [
+  const HeatingType = [
     {
       question: "Quel le Type De Chauffage Pricipame ?",
       options: [
@@ -112,4 +112,4 @@ const productsSuggestions = [
       ],
     },
   ];
-export default {buildingSelection,HeatingTypeStep,productsSuggestions}
+export default {buildingType,HeatingType,productsSuggestions}

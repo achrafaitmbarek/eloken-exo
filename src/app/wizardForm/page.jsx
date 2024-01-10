@@ -32,11 +32,12 @@ const WizardForm = () => {
 
   const [progress, setProgress] = useState(0);
 
-  const { buildingSelection, HeatingTypeStep } = data; // here i destructure the data object to get the buildingSelection property
+  const { buildingType, HeatingType } = data; // here i destructure the data object to get the buildingType property
 
   useEffect(() => {
     setProgress((currentStep / NBR_OF_STEPS) * 100);
   }, [currentStep]);
+
   const handleNext = () => {
     currentStep < NBR_OF_STEPS && setCurrentStep(currentStep + 1);
     // console.log(currentStep);
@@ -48,7 +49,7 @@ const WizardForm = () => {
   };
 
   const formSTeps = [
-    <SelectionStep selection={buildingSelection} storageKey={"buildingType"} />,
+    <SelectionStep selection={buildingType} storageKey={"buildingType"} />,
     <UserInputStep
       unit={"°C"}
       minValue={0}
@@ -57,7 +58,7 @@ const WizardForm = () => {
       question={"A quelle température chauffez vous en moyenne cette surface ?"}
       storageKey={"temperature"}
     />,
-    <SelectionStep selection={HeatingTypeStep} storageKey={"heatingType"} />,
+    <SelectionStep selection={HeatingType} storageKey={"heatingType"} />,
     <UserInputStep
       unit={"Kwh/an"}
       minValue={1000}
@@ -76,11 +77,11 @@ const WizardForm = () => {
           icon={<IoArrowBackCircleOutline />}
           onClick={handleQuit}
         />
-        <Modal
+        {showModal?<Modal
           show={showModal}
           onCancel={handleCancel}
           onConfirm={handleConfirm}
-        />
+        />:null}
         <p>Kit Pompe a chaleur</p>
       </div>
       <ProgressBar progress={progress} />

@@ -24,9 +24,11 @@ const UserInputStep = ({
       <div className="flex flex-col mt-24 gap-10 max-w-4xl">
         <div className="text-3xl font-semibold max-w-md">{question}</div>
         <div>
-          <div className='text-xl font-semibold max-w-sm"'>{`${value.toLocaleString(
-            "fr-FR"
-          )} ${unit}`}</div>
+          <div className='max-w-sm"'>
+            <span className="text-xl font-bold">{value.toLocaleString("fr-FR")}</span>
+            <span className="text-sm font-semibold">{unit}</span>
+          </div>
+
           <input
             type="range"
             min={minValue}
