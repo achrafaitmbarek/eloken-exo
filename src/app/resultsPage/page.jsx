@@ -1,5 +1,5 @@
-"use client"
-import React,{useState,useEffect} from "react";
+"use client";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import CtaButton from "../components/ctaButton";
 import { MdOutlineKeyboardReturn } from "react-icons/md";
@@ -10,7 +10,13 @@ const ResultsPage = () => {
   const [storageData, setStorageData] = useState({});
 
   useEffect(() => {
-    const storageKeys= ['buildingType','temperature','heatingType','consumption','suggestedPump']
+    const storageKeys = [
+      "buildingType",
+      "temperature",
+      "heatingType",
+      "consumption",
+      "suggestedPump",
+    ];
     let data = {};
     storageKeys.forEach((key) => {
       const item = localStorage.getItem(key);
@@ -21,13 +27,17 @@ const ResultsPage = () => {
 
     // tryiig to find the corresponding title for the selected id
     if (buildingType) {
-      const building = buildingType[0].options.find(bt => bt.id === data.buildingType);
+      const building = buildingType[0].options.find(
+        (bt) => bt.id === data.buildingType
+      );
       if (building) {
         data.buildingType = building.title;
       }
     }
     if (HeatingType) {
-      const heating = HeatingType[0].options.find(ht => ht.id === data.heatingType);
+      const heating = HeatingType[0].options.find(
+        (ht) => ht.id === data.heatingType
+      );
       if (heating) {
         data.heatingType = heating.title;
       }
@@ -42,13 +52,22 @@ const ResultsPage = () => {
         Votre kit pompe à chaleur est prêt !
       </h1>
       <p className="text-base font-normal leading-7">
-      Vous avez une <span className="font-bold">{storageData.buildingType}</span> que vous chauffez à <span className="font-bold">{storageData.temperature}</span>°C à l’ <span className="font-bold">{storageData.heatingType}</span>. Vous
-  consommez <span className="font-bold">{storageData.consumption}</span> kwh/an. Nous avons selectionné pour vous la <span className="font-bold">{storageData.suggestedPump}</span>
- </p>
+        Vous avez une{" "}
+        <span className="font-bold">{storageData.buildingType}</span> que vous
+        chauffez à <span className="font-bold">{storageData.temperature}</span>
+        °C à l’ <span className="font-bold">{storageData.heatingType}</span>.
+        Vous consommez{" "}
+        <span className="font-bold">{storageData.consumption}</span> kwh/an.
+        Nous avons selectionné pour vous la{" "}
+        <span className="font-bold">{storageData.suggestedPump}</span>
+      </p>
       <Link href="/wizardForm">
         <CtaButton
           text={"Recommencer"}
           icon={<MdOutlineKeyboardReturn />}
+          onClick={() => {
+            localStorage.clear();
+          }}
         />
       </Link>
     </div>
