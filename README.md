@@ -1,6 +1,20 @@
-# Multistep Form Project: Achraf Ait Mk
+# Multistep Form Project:Eloken Achraf Ait Mk
+
+[![Status](https://img.shields.io/badge/Status-In%20Progress-blueviolet)]()
+[![License](https://img.shields.io/badge/License-MIT-green)]()
 
 Welcome to the repository of my Multistep Form project. This project is a testament to my passion for crafting seamless and engaging user experiences. Inspired by given Eloken Design, the project is built using Next.js, Tailwind CSS, and various technologies, showcasing my commitment to creating dynamic and user-friendly web applications.
+## Table of Contents
+- [About the Project](#about-the-project)
+  - [Multistep Form](#multistep-form)
+  - [Reusable Components](#reusable-components)
+  - [Modal Implementation](#modal-implementation)
+  - [Responsive Design](#responsive-design)
+- [Technologies Used](#technologies-used)
+- [How to Deploy Locally](#how-to-deploy-locally)
+- [Screenshots](#screenshots)
+- [Live Demo](#live-demo)
+
 
 ## About the Project
 

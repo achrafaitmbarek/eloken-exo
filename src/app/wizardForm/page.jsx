@@ -23,7 +23,6 @@ const WizardForm = () => {
   const handleQuit = () => {
     setShowModal(true);
   };
-  Ò;
   const handleCancel = () => {
     setShowModal(false);
   };
