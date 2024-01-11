@@ -19,7 +19,7 @@ export default function Home() {
         <CtaButton text={"Commencer"} type={'submit'} />
       </Link>
       <div className="source-code bottom-0 w-full fixed mb-6">
-        <p className="text-lg">Source code provided by <a className="font-bold" href="https://github.com/achrafaitmbarek/eloken-exo">Achraf Ait Mk</a></p>
+        <p className="text-lg">Source code provided by <a className="font-bold" href="https://github.com/achrafaitmbarek/eloken-exo">Achraf Ait Mk 🖤 Eloken</a></p>
       </div>
     </div>
   );
