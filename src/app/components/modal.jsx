@@ -2,6 +2,8 @@ import { Fragment, useRef, useState, useEffect } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { ExclamationTriangleIcon } from "@heroicons/react/24/outline";
 
+// costuming the modal from tailwindcss and headlessui
+
 const Modal = ({ show, onCancel, onConfirm }) => {
   const [open, setOpen] = useState(true);
 
@@ -60,7 +62,8 @@ const Modal = ({ show, onCancel, onConfirm }) => {
                       </Dialog.Title>
                       <div className="mt-2">
                         <p className="text-sm text-gray-500">
-                        Toutes vos réponses seront réinitialisées et vous perdrez votre progression.
+                          Toutes vos réponses seront réinitialisées et vous
+                          perdrez votre progression.
                         </p>
                       </div>
                     </div>

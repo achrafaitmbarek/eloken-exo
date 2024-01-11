@@ -10,17 +10,20 @@ import Result from "../components/result";
 import data from "../data/data";
 import Modal from "../components/modal";
 
-
 const WizardForm = () => {
   const [currentStep, setCurrentStep] = useState(1);
   const NBR_OF_STEPS = 5;
+
+  const [progress, setProgress] = useState(0);
+
+  const { buildingType, HeatingType } = data; // here i destructure the data object to get the buildingType property
 
   const [showModal, setShowModal] = useState(false);
 
   const handleQuit = () => {
     setShowModal(true);
   };
-
+  Ò;
   const handleCancel = () => {
     setShowModal(false);
   };
@@ -29,10 +32,6 @@ const WizardForm = () => {
     window.location.href = "/";
     setShowModal(false);
   };
-
-  const [progress, setProgress] = useState(0);
-
-  const { buildingType, HeatingType } = data; // here i destructure the data object to get the buildingType property
 
   useEffect(() => {
     setProgress((currentStep / NBR_OF_STEPS) * 100);
@@ -70,18 +69,20 @@ const WizardForm = () => {
     <Result />,
   ];
   return (
-    <div className="m-8 space-y-6">
+    <div className="m-8 space-y-6 ">
       <div className="flex flex-row items-center space-x-3">
         <CtaButton
           text="Quitter"
           icon={<IoArrowBackCircleOutline />}
           onClick={handleQuit}
         />
-        {showModal?<Modal
-          show={showModal}
-          onCancel={handleCancel}
-          onConfirm={handleConfirm}
-        />:null}
+        {showModal ? (
+          <Modal
+            show={showModal}
+            onCancel={handleCancel}
+            onConfirm={handleConfirm}
+          />
+        ) : null}
         <p>Kit Pompe a chaleur</p>
       </div>
       <ProgressBar progress={progress} />

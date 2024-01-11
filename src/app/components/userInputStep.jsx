@@ -22,10 +22,14 @@ const UserInputStep = ({
   return (
     <div className="flex flex-col items-center justify-center">
       <div className="flex flex-col mt-24 gap-10 max-w-4xl">
-        <div className="text-3xl font-semibold max-w-md animate-fade-in-scale-1 ">{question}</div>
+        <div className="text-3xl font-semibold max-w-md animate-fade-in-scale-1 ">
+          {question}
+        </div>
         <div>
-          <div className='max-w-sm animate-fade-in-scale-2 '>
-            <span className="text-xl font-bold">{value.toLocaleString("fr-FR")}</span>
+          <div className="max-w-sm animate-fade-in-scale-2 ">
+            <span className="text-xl font-bold">
+              {value.toLocaleString("fr-FR")}
+            </span>
             <span className="text-sm font-semibold">{unit}</span>
           </div>
           <input

@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from "react";
 import Card from "./card";
 
-const selectionStep = ({ selection,storageKey }) => {
+const selectionStep = ({ selection, storageKey }) => {
   const [selectedChoice, setSelectedChoice] = useState(1);
-  
+
   useEffect(() => {
     localStorage.setItem(storageKey, selectedChoice);
     console.log(selectedChoice);
   }, [selectedChoice]);
-
 
   const handleCardChoice = (id) => {
     setSelectedChoice(id);
@@ -20,7 +19,7 @@ const selectionStep = ({ selection,storageKey }) => {
           {selection[0].question}
         </div>
         <div className="flex flex-row gap-8">
-          {selection[0].options.map((option,index) => (
+          {selection[0].options.map((option, index) => (
             <Card
               key={option.id}
               id={option.id}

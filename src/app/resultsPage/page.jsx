@@ -3,8 +3,8 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import CtaButton from "../components/ctaButton";
 import { MdOutlineKeyboardReturn } from "react-icons/md";
-
 import data from "../data/data";
+
 const ResultsPage = () => {
   const { buildingType, HeatingType } = data;
   const [storageData, setStorageData] = useState({});
@@ -47,7 +47,7 @@ const ResultsPage = () => {
   }, []);
 
   return (
-    <div className="flex flex-col gap-8 items-center text-center p-64">
+    <div className="flex flex-col gap-8 items-center text-center p-8 md:p-24 lg:p-52">
       <h1 className="text-5xl font-extrabold leading-12">
         Votre kit pompe à chaleur est prêt !
       </h1>
