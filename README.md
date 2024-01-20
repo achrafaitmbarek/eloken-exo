@@ -79,7 +79,53 @@ The project leverages the following technologies:
 ![Alt text](<screenshots/Screenshot 2024-01-10 at 5.43.37 AM.png>) 
 ![Alt text](<screenshots/Screenshot 2024-01-10 at 5.43.53 AM.png>) 
 ![Alt text](<screenshots/Screenshot 2024-01-10 at 5.44.20 AM.png>)
-
+## data 
+```javascript
+{
+  "productsSuggestions": [
+    {
+      "title": "Pompe à chaleur 1",
+      "powerRange": { "min": 1000, "max": 4999 },
+      "price": 3456,
+      "image": "path/to/img7",
+      "pacType": "Air/Eau",
+      "gasType": "R330",
+      "warranty": 2,
+      "isPacSystemModule": true
+    },
+    {
+      "title": "Pompe à chaleur 2",
+      "powerRange": { "min": 5000, "max": 10000 },
+      "price": 5678,
+      "image": "path/to/img8",
+      "pacType": "Air/Air",
+      "gasType": "R430",
+      "warranty": 3,
+      "isPacSystemModule": true
+    },
+    {
+      "title": "Pompe à chaleur 3",
+      "powerRange": { "min": 10000, "max": 15000 },
+      "price": 7890,
+      "image": "path/to/img7",
+      "pacType": "Air/Eau",
+      "gasType": "R380",
+      "warranty": 4,
+      "isPacSystemModule": true
+    },
+    {
+      "title": "Pompe à chaleur 4",
+      "powerRange": { "min": 15000, "max": 30000 },
+      "price": 1234,
+      "image": "path/to/img8",
+      "pacType": "Air/Air",
+      "gasType": "R380",
+      "warranty": 5,
+      "isPacSystemModule": true
+    }
+  ]
+}
+```
 ## Live Demo ?
 
 Check out here : https://eloken-exo-alt.vercel.app/
